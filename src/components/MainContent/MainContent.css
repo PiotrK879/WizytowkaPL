@@ -1,0 +1,140 @@
+.main-content {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 -10px 40px rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.main-subtitle {
+  font-size: 20px;
+  color: #999;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.divider {
+  width: 300px;
+  height: 1px;
+  background: #444;
+  margin: 0 auto;
+}
+
+.steps-section {
+  margin-top: 60px;
+  display: grid;
+  gap: 80px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.step.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step-header-wrapper {
+  grid-column: 1;
+}
+
+.step:nth-child(even) .step-header-wrapper {
+  grid-column: 2;
+}
+
+.step-header {
+  margin-bottom: 0;
+}
+
+.step-number {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #aaa;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.step-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.step-divider {
+  width: 200px;
+  height: 1px;
+  background: #444;
+  margin: 20px 0 40px 0;
+}
+
+.step-content {
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+.step:nth-child(odd) .step-content {
+  grid-column: 1;
+}
+
+.step:nth-child(even) .step-content {
+  grid-column: 2;
+  margin-left: 0;
+}
+
+.step-content p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+.step-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 60px 20px;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .step-title {
+    font-size: 24px;
+  }
+
+  .step-content p {
+    font-size: 14px;
+  }
+}

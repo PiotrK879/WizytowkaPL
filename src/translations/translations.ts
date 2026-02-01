@@ -1,11 +1,16 @@
 export const translations = {
   en: {
     header: {
-      title: 'COLLABORATE WITH YOUR',
+      title: 'WE ARE',
       titleSecond: 'SHADOW OPERATOR',
       subtitle: 'Support • Integrity • Dedication • Action',
       subtitleSecond: "I'm the invisible force driving your success",
       getStarted: 'GET STARTED',
+      contact: 'CONTACT',
+    },
+    menu: {
+      home: 'HOME',
+      howItWorks: 'HOW IT WORKS',
       contact: 'CONTACT',
     },
     mainContent: {
@@ -44,6 +49,35 @@ export const translations = {
           "This is how creators at scale work. Now it's your turn.",
         ],
       },
+      stepFour: {
+        number: 'STEP FOUR',
+        title: 'WHY WORK WITH ME?',
+        content: [
+          "The most successful creators don't work alone. They just have a better team in the shadows.",
+          'I know how to package it. I know how to value it.',
+          'I know how to write marketing. I know how to run launches.',
+          'Creators focus on the craft. Operators run the business.',
+        ],
+      },
+      stepFive: {
+        number: 'STEP FIVE',
+        title: "THE CREATOR'S CHALLENGE",
+        content: [
+          "Why do creators typically say yes to working with shadow operators?",
+          "There's no financial risk, they handle what creators don't want to do, and it's a monetization path creators didn't know existed.",
+          "What is the main reason creators can't monetize their audiences effectively on their own?",
+          "They lack the marketing expertise, don't know how to package knowledge into products, and don't want to run a business.",
+        ],
+      },
+      stepSix: {
+        number: 'STEP SIX',
+        title: 'WORK SMART, NOT HARD',
+        content: [
+          'Following the principle of "Work Smart, Not Hard," today\'s shadow operators have a significant advantage over their predecessors of the past.',
+          "The right set of tools has transformed the work of entire teams of experts into user-friendly software.",
+          "This is the new era of creator economy—where smart systems replace brute force.",
+        ],
+      },
     },
     contact: {
       title: 'GET IN TOUCH',
@@ -56,11 +90,16 @@ export const translations = {
   },
   pl: {
     header: {
-      title: 'WSPÓŁPRACUJ ZE SWOIM',
+      title: 'JESTEŚMY',
       titleSecond: 'SHADOW OPERATOREM',
       subtitle: 'Wsparcie • Uczciwość • Poświęcenie • Działanie',
       subtitleSecond: 'Jestem niewidzialną siłą napędzającą Twój sukces',
       getStarted: 'ROZPOCZNIJ',
+      contact: 'KONTAKT',
+    },
+    menu: {
+      home: 'START',
+      howItWorks: 'JAK TO DZIAŁA',
       contact: 'KONTAKT',
     },
     mainContent: {
@@ -97,6 +136,35 @@ export const translations = {
           'Wiem jak to zapakować. Wiem jak to wycenić. Wiem jak pisać marketing. Wiem jak prowadzić uruchomienia.',
           'Dla Ciebie nie ma ryzyka finansowego. Zajmuję się tym, czego nie chcesz robić i otwieram ścieżkę monetyzacji, o której nie wiedziałeś.',
           'Tak pracują twórcy na dużą skalę. Teraz Twoja kolej.',
+        ],
+      },
+      stepFour: {
+        number: 'KROK CZWARTY',
+        title: 'DLACZEGO ZE MNĄ?',
+        content: [
+          'Najbitniejsi twórcy nie pracują sami. Po prostu mają lepszy zespół w cieniach.',
+          'Wiem jak to zapakować. Wiem jak to wycenić.',
+          'Wiem jak pisać marketing. Wiem jak prowadzić uruchomienia.',
+          'Twórcy skupiają się na sztuce. Operatorzy prowadzą biznes.',
+        ],
+      },
+      stepFive: {
+        number: 'KROK PIĄTY',
+        title: 'WYZWANIE TWÓRCY',
+        content: [
+          'Dlaczego twórcy zazwyczaj zgadzają się na współpracę z operatorami cienia?',
+          'Nie ma ryzyka finansowego, zajmują się tym, czego twórcy nie chcą robić i jest to ścieżka monetyzacji, o której twórcy nie wiedzieli.',
+          'Jaki jest główny powód, dla którego twórcy nie mogą skutecznie monetyzować swoich odbiorców samodzielnie?',
+          'Brakuje im wiedzy marketingowej, nie wiedzą jak zapakować wiedzę w produkty i nie chcą prowadzić biznesu.',
+        ],
+      },
+      stepSix: {
+        number: 'KROK SZÓSTY',
+        title: 'PRACUJ MĄDRZE, NIE CIĘŻKO',
+        content: [
+          'Zgodnie z zasadą "Pracuj Mądrze, Nie Ciężko," dzisiejsi operatorzy cienia mają znaczącą przewagę nad swoimi poprzednikami z przeszłości.',
+          'Odpowiedni zestaw narzędzi przekształcił pracę całych zespołów ekspertów w przyjazne oprogramowanie.',
+          'To nowa era gospodarki twórców—gdzie inteligentne systemy zastępują siłę brutto.',
         ],
       },
     },

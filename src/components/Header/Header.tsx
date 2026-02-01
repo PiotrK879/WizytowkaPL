@@ -2,10 +2,13 @@ import './Header.css';
 import headerLogo from '../../assets/headerlog.png';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../translations/translations';
+import { useState } from 'react';
+import SideMenu from '../SideMenu/SideMenu';
 
 export default function Header() {
   const { language } = useLanguage();
   const t = translations[language];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollToElement = (selector: string, duration: number) => {
     const element = document.querySelector(selector);
     if (!element) return;
@@ -43,6 +46,14 @@ export default function Header() {
 
   return (
     <header className="header">
+      <button className="hamburger-menu" onClick={() => setIsMenuOpen(true)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+
       <div className="header-content">
         <img src={headerLogo} alt="SIDA" className="header-logo" />
 

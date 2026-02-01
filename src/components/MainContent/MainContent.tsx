@@ -85,6 +85,54 @@ export default function MainContent() {
               ))}
             </div>
           </div>
+
+          <div className="step">
+            <div className="step-header-wrapper">
+              <div className="step-header">
+                <span className="step-number">{t.mainContent.stepFour.number}</span>
+                <h2 className="step-title">{t.mainContent.stepFour.title}</h2>
+              </div>
+              <div className="step-divider"></div>
+            </div>
+
+            <div className="step-content">
+              {t.mainContent.stepFour.content.map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
+            </div>
+          </div>
+
+          <div className="step">
+            <div className="step-header-wrapper">
+              <div className="step-header">
+                <span className="step-number">{t.mainContent.stepFive.number}</span>
+                <h2 className="step-title">{t.mainContent.stepFive.title}</h2>
+              </div>
+              <div className="step-divider"></div>
+            </div>
+
+            <div className="step-content">
+              {t.mainContent.stepFive.content.map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
+            </div>
+          </div>
+
+          <div className="step">
+            <div className="step-header-wrapper">
+              <div className="step-header">
+                <span className="step-number">{t.mainContent.stepSix.number}</span>
+                <h2 className="step-title">{t.mainContent.stepSix.title}</h2>
+              </div>
+              <div className="step-divider"></div>
+            </div>
+
+            <div className="step-content">
+              {t.mainContent.stepSix.content.map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

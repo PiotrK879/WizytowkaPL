@@ -1,0 +1,113 @@
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100vh;
+  background: #000;
+  z-index: 2001;
+  transition: left 0.3s ease-in-out;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 30px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2002;
+}
+
+.close-button span {
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.close-button span:first-child {
+  transform: rotate(45deg);
+}
+
+.close-button span:last-child {
+  transform: rotate(-45deg);
+}
+
+.close-button:hover span {
+  background: #888;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 80px;
+}
+
+.menu-item {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.menu-item:hover {
+  color: #888;
+  transform: translateX(10px);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .side-menu {
+    width: 280px;
+    left: -280px;
+    padding: 60px 20px;
+  }
+
+  .menu-item {
+    font-size: 18px;
+  }
+}

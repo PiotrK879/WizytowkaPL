@@ -6,6 +6,23 @@ import { translations } from '../../translations/translations';
 export default function MainContent() {
   const { language } = useLanguage();
   const t = translations[language];
+
+  type MainStep = {
+    number: string;
+    title: string;
+    content: string[];
+    variant?: 'bullets';
+  };
+
+  const steps: MainStep[] = [
+    t.mainContent.stepOne,
+    t.mainContent.stepTwo,
+    t.mainContent.stepThree,
+    t.mainContent.stepFour,
+    t.mainContent.stepFive,
+    t.mainContent.stepSix,
+    t.mainContent.stepSeven,
+  ] as MainStep[];
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -34,105 +51,35 @@ export default function MainContent() {
         <div className="intro-section">
           <h1 className="main-title">{t.mainContent.mainTitle}</h1>
           <p className="main-subtitle">{t.mainContent.mainSubtitle}</p>
+          <p className="main-highlight">{t.mainContent.mainHighlight}</p>
+          <p className="main-summary">{t.mainContent.mainSummary}</p>
           <div className="divider"></div>
         </div>
 
         <div className="steps-section">
-          <div className="step">
-            <div className="step-header-wrapper">
-              <div className="step-header">
-                <span className="step-number">{t.mainContent.stepOne.number}</span>
-                <h2 className="step-title">{t.mainContent.stepOne.title}</h2>
+          {steps.map((step, stepIndex) => (
+            <div className="step" key={stepIndex}>
+              <div className="step-header-wrapper">
+                <div className="step-header">
+                  <span className="step-number">{step.number}</span>
+                  <h2 className="step-title">{step.title}</h2>
+                </div>
+                <div className="step-divider"></div>
               </div>
-              <div className="step-divider"></div>
-            </div>
 
-            <div className="step-content">
-              {t.mainContent.stepOne.content.map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
-            </div>
-          </div>
-
-          <div className="step">
-            <div className="step-header-wrapper">
-              <div className="step-header">
-                <span className="step-number">{t.mainContent.stepTwo.number}</span>
-                <h2 className="step-title">{t.mainContent.stepTwo.title}</h2>
+              <div className="step-content">
+                {step.variant === 'bullets' ? (
+                  <ul className="step-list">
+                    {step.content.map((text: string, index: number) => (
+                      <li key={index}>{text}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  step.content.map((text: string, index: number) => <p key={index}>{text}</p>)
+                )}
               </div>
-              <div className="step-divider"></div>
             </div>
-
-            <div className="step-content">
-              {t.mainContent.stepTwo.content.map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
-            </div>
-          </div>
-
-          <div className="step">
-            <div className="step-header-wrapper">
-              <div className="step-header">
-                <span className="step-number">{t.mainContent.stepThree.number}</span>
-                <h2 className="step-title">{t.mainContent.stepThree.title}</h2>
-              </div>
-              <div className="step-divider"></div>
-            </div>
-
-            <div className="step-content">
-              {t.mainContent.stepThree.content.map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
-            </div>
-          </div>
-
-          <div className="step">
-            <div className="step-header-wrapper">
-              <div className="step-header">
-                <span className="step-number">{t.mainContent.stepFour.number}</span>
-                <h2 className="step-title">{t.mainContent.stepFour.title}</h2>
-              </div>
-              <div className="step-divider"></div>
-            </div>
-
-            <div className="step-content">
-              {t.mainContent.stepFour.content.map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
-            </div>
-          </div>
-
-          <div className="step">
-            <div className="step-header-wrapper">
-              <div className="step-header">
-                <span className="step-number">{t.mainContent.stepFive.number}</span>
-                <h2 className="step-title">{t.mainContent.stepFive.title}</h2>
-              </div>
-              <div className="step-divider"></div>
-            </div>
-
-            <div className="step-content">
-              {t.mainContent.stepFive.content.map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
-            </div>
-          </div>
-
-          <div className="step">
-            <div className="step-header-wrapper">
-              <div className="step-header">
-                <span className="step-number">{t.mainContent.stepSix.number}</span>
-                <h2 className="step-title">{t.mainContent.stepSix.title}</h2>
-              </div>
-              <div className="step-divider"></div>
-            </div>
-
-            <div className="step-content">
-              {t.mainContent.stepSix.content.map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

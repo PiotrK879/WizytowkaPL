@@ -30,7 +30,24 @@
   font-size: 20px;
   color: #999;
   font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.main-highlight {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.main-summary {
+  font-size: 20px;
+  color: #ddd;
+  font-weight: 500;
   margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 .divider {
@@ -49,7 +66,7 @@
 .step {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 20px 60px;
   align-items: start;
   opacity: 0;
   transform: translateY(20px);
@@ -74,7 +91,7 @@
 }
 
 .step-number {
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 2px;
   color: #aaa;
   text-transform: uppercase;
@@ -93,12 +110,28 @@
   width: 200px;
   height: 1px;
   background: #444;
-  margin: 20px 0 40px 0;
+  margin: 20px 0 20px 0;
 }
 
 .step-content {
   max-width: 600px;
   line-height: 1.8;
+}
+
+.step-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.step-list li {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 14px;
+  font-weight: 300;
+}
+
+.step-list li:last-child {
+  margin-bottom: 0;
 }
 
 .step:nth-child(odd) .step-content {
@@ -111,7 +144,7 @@
 }
 
 .step-content p {
-  font-size: 16px;
+  font-size: 18px;
   color: #ccc;
   margin-bottom: 24px;
   font-weight: 300;
@@ -126,15 +159,49 @@
     padding: 60px 20px;
   }
 
+  .intro-section {
+    margin-bottom: 35px;
+  }
+
+  .steps-section {
+    margin-top: 20px;
+  }
+
   .main-title {
     font-size: 32px;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .step-header-wrapper {
+    grid-column: 1 !important;
+  }
+
+  .step:nth-child(even) .step-header-wrapper {
+    grid-column: 1 !important;
+  }
+
+  .step-content {
+    grid-column: 1 !important;
+    max-width: 100%;
+  }
+
+  .step:nth-child(odd) .step-content {
+    grid-column: 1 !important;
+  }
+
+  .step:nth-child(even) .step-content {
+    grid-column: 1 !important;
   }
 
   .step-title {
     font-size: 24px;
   }
 
-  .step-content p {
-    font-size: 14px;
+  .step-divider {
+    width: 150px;
   }
 }

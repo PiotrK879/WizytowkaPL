@@ -62,7 +62,7 @@ export default function MainContent() {
               <div className="step-header-wrapper">
                 <div className="step-header">
                   <span className="step-number">{step.number}</span>
-                  <h2 className="step-title">{step.title}</h2>
+                  {step.title && <h2 className="step-title">{step.title}</h2>}
                 </div>
                 <div className="step-divider"></div>
               </div>

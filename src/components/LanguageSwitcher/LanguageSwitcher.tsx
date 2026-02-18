@@ -6,7 +6,7 @@ import { useLanguage } from '../../context/LanguageContext';
 
 export default function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
-  const [backgroundImage, setBackgroundImage] = useState<string>(flagEn);
+  const [backgroundImage, setBackgroundImage] = useState<string>(flagPl);
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'pl' : 'en');

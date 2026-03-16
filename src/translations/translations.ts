@@ -97,7 +97,7 @@ export const translations = {
   },
   pl: {
     header: {
-      title: 'JESTEŚMY',
+      title: 'JESTEM',
       titleSecond: 'SHADOW OPERATOREM',
       subtitle: 'Wsparcie • Uczciwość • Poświęcenie • Działanie',
       subtitleSecond: 'Jestem niewidzialną siłą napędzającą Twój sukces',
@@ -187,7 +187,7 @@ export const translations = {
       },
     },
     contact: {
-      title: 'SKONTAKTUJ SIĘ Z NAMI',
+      title: 'SKONTAKTUJ SIĘ',
       subtitle: 'Chcesz zamienić uwagę odbiorców na przychód? Porozmawiajmy.',
       email: 'Email',
       phone: 'Telefon',

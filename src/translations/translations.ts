@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     header: {
-      title: 'WE ARE',
+      title: 'I AM',
       titleSecond: 'SHADOW OPERATOR',
       subtitle: 'Support • Integrity • Dedication • Action',
       subtitleSecond: 'I\'m the invisible force driving your success',

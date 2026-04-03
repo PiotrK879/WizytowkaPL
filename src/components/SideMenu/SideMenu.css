@@ -1,124 +1,124 @@
+/* ─── Panel ─────────────────────────────────────── */
 .side-menu {
   position: fixed;
   top: 0;
-  left: -320px;
-  width: 320px;
+  left: -300px;
+  width: 300px;
   height: 100vh;
-  background: #0a0a0a;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: #07070b;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
   z-index: 2001;
-  transition: left 0.3s ease-in-out;
+  transition: left 0.38s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: auto;
   display: flex;
   flex-direction: column;
-  padding: 60px 20px;
-  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.7);
+  padding: 56px 20px 36px;
 }
 
 .side-menu.open {
   left: 0;
 }
 
+/* ─── Close button ──────────────────────────────── */
 .close-button {
   position: absolute;
-  top: 25px;
-  left: 25px;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  border: none;
+  top: 20px;
+  left: 20px;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
   cursor: pointer;
   padding: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 2002;
+  transition: background 150ms, border-color 150ms;
 }
 
 .close-button span {
-  width: 25px;
-  height: 2px;
-  background: #fff;
+  width: 16px;
+  height: 1.5px;
+  background: #e8e3db;
   position: absolute;
-  transition: all 0.3s ease;
+  border-radius: 1px;
+  transition: background 150ms;
 }
 
-.close-button span:first-child {
-  transform: rotate(45deg);
+.close-button span:first-child  { transform: rotate(45deg); }
+.close-button span:last-child   { transform: rotate(-45deg); }
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
-.close-button span:last-child {
-  transform: rotate(-45deg);
-}
+.close-button:hover span { background: #fff; }
 
-.close-button:hover span {
-  background: #888;
-}
-
+/* ─── Nav ───────────────────────────────────────── */
 .menu-nav {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 80px;
+  gap: 4px;
+  margin-top: 72px;
 }
 
 .menu-item {
   background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 16px;
+  border: 1px solid transparent;
+  color: #e8e3db;
+  font-size: 0.6875rem;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
-  padding: 14px 16px;
-  transition: all 0.25s ease;
-  letter-spacing: 1px;
+  padding: 12px 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: 14px;
-  border-radius: 10px;
-  border: 1px solid transparent;
+  gap: 12px;
+  border-radius: 8px;
+  transition: background 160ms, border-color 160ms, transform 160ms;
 }
 
 .menu-item-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 7px;
   flex-shrink: 0;
-  transition: background 0.25s ease;
+  color: #72727a;
+  transition: background 160ms, color 160ms;
 }
 
-.menu-item-label {
-  text-transform: uppercase;
-}
+.menu-item-label { /* no extra needed */ }
 
 .menu-item:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
-  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
 }
 
 .menu-item:hover .menu-item-icon {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.12);
+  color: #e8e3db;
 }
 
+/* ─── Overlay ───────────────────────────────────── */
 .menu-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
   z-index: 2000;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .menu-overlay.active {
@@ -127,25 +127,24 @@
   pointer-events: auto;
 }
 
+/* ─── Logo footer ───────────────────────────────── */
 .side-menu-logo {
   margin-top: auto;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
   align-items: baseline;
   gap: 5px;
-  opacity: 0.45;
-  transition: opacity 0.25s ease;
+  opacity: 0.4;
+  transition: opacity 0.25s;
 }
 
-.side-menu-logo:hover {
-  opacity: 0.8;
-}
+.side-menu-logo:hover { opacity: 0.75; }
 
 .side-menu-logo-sida {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 3px;
+  letter-spacing: 0.24em;
   color: #fff;
   text-transform: uppercase;
 }
@@ -153,19 +152,14 @@
 .side-menu-logo-media {
   font-size: 10px;
   font-weight: 400;
-  letter-spacing: 4px;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.3em;
+  color: #72727a;
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .side-menu {
     width: 280px;
     left: -280px;
-    padding: 60px 20px;
-  }
-
-  .menu-item {
-    font-size: 18px;
   }
 }

@@ -2,48 +2,24 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px 15px;
-  border-radius: 50px;
-  backdrop-filter: blur(10px);
-}
-
-.language-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  user-select: none;
-}
-
-.flag-placeholder {
-  width: 24px;
-  height: 16px;
-  background: linear-gradient(135deg, #999 0%, #666 100%);
-  border-radius: 3px;
-  display: inline-block;
+  z-index: 1000;
 }
 
 .toggle-button {
-  width: 50px;
-  height: 28px;
-  background: #444;
-  border: 2px solid #666;
-  border-radius: 20px;
+  width: 46px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
   padding: 2px;
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  transition: border-color 160ms;
+  background-size: cover;
+  background-position: center;
 }
 
 .toggle-button.pl {
@@ -51,42 +27,21 @@
 }
 
 .toggle-circle {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   background: #fff;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  flex-shrink: 0;
+  transition: all 0.3s;
 }
 
 .toggle-button:hover {
-  border-color: #888;
-  background: #555;
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .language-switcher {
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    gap: 10px;
-  }
-
-  .language-option {
-    font-size: 12px;
-  }
-
-  .flag-placeholder {
-    width: 20px;
-    height: 14px;
-  }
-
-  .toggle-button {
-    width: 44px;
-    height: 24px;
-  }
-
-  .toggle-circle {
-    width: 18px;
-    height: 18px;
+    top: 14px;
+    right: 14px;
   }
 }

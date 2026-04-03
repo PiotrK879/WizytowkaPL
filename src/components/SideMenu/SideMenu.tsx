@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Home, Settings, Mail } from 'lucide-react';
 import './SideMenu.css';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../translations/translations';
@@ -77,15 +78,23 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
 
         <nav className="menu-nav">
           <button className="menu-item" onClick={handleHome}>
-            {t.menu.home}
+            <span className="menu-item-icon"><Home size={20} /></span>
+            <span className="menu-item-label">{t.menu.home}</span>
           </button>
           <button className="menu-item" onClick={handleHowItWorks}>
-            {t.menu.howItWorks}
+            <span className="menu-item-icon"><Settings size={20} /></span>
+            <span className="menu-item-label">{t.menu.howItWorks}</span>
           </button>
           <button className="menu-item" onClick={handleContact}>
-            {t.menu.contact}
+            <span className="menu-item-icon"><Mail size={20} /></span>
+            <span className="menu-item-label">{t.menu.contact}</span>
           </button>
         </nav>
+
+        <div className="side-menu-logo">
+          <span className="side-menu-logo-sida">SIDA</span>
+          <span className="side-menu-logo-media">MEDIA</span>
+        </div>
       </div>
     </>
   );

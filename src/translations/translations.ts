@@ -120,7 +120,7 @@ export const translations = {
     mainContent: {
       mainTitle: 'Kim jestem',
       mainSubtitle: 'Jestem Operatorem w Cieniu',
-      mainHighlight: 'Pomagam Twórcom zarabiać dzięki wprowadzaniu produktów cyfrowych na rynek lub produktów opartych na wiedzy, ostatecznie spieniężamy publiczność. Działamy w tle i w ciszy, zarządzając kontem, strategią i treściami dla kogoś takiego jak; Micro Twórcy z liczba Fallowers od 10k do 50k.',
+      mainHighlight: 'Pomagam Twórcom zarabiać dzięki wprowadzaniu produktów cyfrowych na rynek lub produktów opartych na wiedzy, ostatecznie spieniężamy publiczność. Działamy w tle i w ciszy, zarządzając kontem, strategią i treściami dla kogoś takiego jak; Micro Twórcy z liczbą Followers od 10k do 50k.',
       mainSummary: 'Jestem niewidzialną siłą napędzającą sukces w różnych branżach.',
       stepOne: {
         number: 'MOJA SUGESTIA DO TWÓRCY',

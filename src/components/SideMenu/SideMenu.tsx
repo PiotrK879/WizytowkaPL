@@ -14,14 +14,23 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
   const t = translations[language];
 
   useEffect(() => {
+    const fixedEls = document.querySelectorAll<HTMLElement>('.language-switcher');
+
     if (isOpen) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.style.overflow = 'hidden';
+      fixedEls.forEach(el => { el.style.paddingRight = `${scrollbarWidth}px`; });
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      fixedEls.forEach(el => { el.style.paddingRight = ''; });
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      fixedEls.forEach(el => { el.style.paddingRight = ''; });
     };
   }, [isOpen]);
 

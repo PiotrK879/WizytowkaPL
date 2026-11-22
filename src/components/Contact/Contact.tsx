@@ -111,11 +111,6 @@ export default function Contact() {
               <h3>{t.contact.email}</h3>
               <a href="mailto:hello@sida.com" className="contact-link">{t.contact.emailAddress}</a>
             </div>
-            <div className="contact-item">
-              <h3>{t.contact.phone}</h3>
-              <a href="tel:+1234567890" className="contact-link">{t.contact.phoneNumber}</a>
-            </div>
-            <div className="contact-item">
               <h3>{t.contact.instagram}</h3>
               <a href={t.contact.instagramUrl} target="_blank" rel="noopener noreferrer" className="contact-link instagram-link">
                   <InstagramIcon />
